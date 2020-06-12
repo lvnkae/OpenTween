@@ -1,14 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="16.6.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3D8995C7-BDF3-4273-9F9D-DDD902F6A101}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>OpenTween</RootNamespace>
     <AssemblyName>OpenTween</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <_FullFrameworkReferenceAssemblyPaths>dummy</_FullFrameworkReferenceAssemblyPaths>
+    <_TargetFrameworkDirectories>$(DOTNETCORE_APP_REF);$(DOTNETCORE_SDK)</_TargetFrameworkDirectories>
+    <FrameworkPathOverride>$(DOTNETCORE_SDK)/ref</FrameworkPathOverride>
+    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v$(DOTNETCORE_VERSION)</TargetFrameworkVersion>
+    <_TargetFrameworkVersionWithoutV>$(DOTNETCORE_VERSION)</_TargetFrameworkVersionWithoutV>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
     <LangVersion>8.0</LangVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -46,6 +52,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Resources.Extensions" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
